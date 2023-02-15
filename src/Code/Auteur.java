@@ -2,12 +2,13 @@ package Code;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Auteur {
     private String nom;
     private String prenom;
     private String nationalite;
-    List<Ouvrage> listerOuvrages =new ArrayList<>();
+    List<Ouvrage> lOuvrages =new ArrayList<>();
 
     public Auteur(String nom, String prenom, String nationalite) {
         this.nom = nom;
@@ -39,11 +40,33 @@ public class Auteur {
         this.nationalite = nationalite;
     }
 
-    public List<Ouvrage> getListerOuvrages() {
-        return listerOuvrages;
+    public List<Ouvrage> getLOuvrages() {
+        return lOuvrages;
     }
 
-    public void setListerOuvrages(List<Ouvrage> listerOuvrages) {
-        this.listerOuvrages = listerOuvrages;
+    public void setLOuvrages(List<Ouvrage> lOuvrages) {
+        this.lOuvrages = lOuvrages;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Auteur auteur = (Auteur) o;
+        return Objects.equals(nom, auteur.nom) && Objects.equals(prenom, auteur.prenom) && Objects.equals(nationalite, auteur.nationalite);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nom, prenom, nationalite);
+    }
+
+    @Override
+    public String toString() {
+        return "Auteur{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", nationalite='" + nationalite + '\'' +
+                '}';
     }
 }

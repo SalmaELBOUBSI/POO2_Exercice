@@ -6,50 +6,37 @@ import java.util.List;
 import java.util.Objects;
 
 public class Lecteur {
-    private Long numLecteur;
+    private int numlecteur;
     private String nom;
     private String prenom;
     private LocalDate dateNaiss;
     private String mail;
     private String adresse;
     private String tel;
-    List<Exemplaire> exemplairesEnLocation = new ArrayList<>();
-    List<Exemplaire> exemplairesLoues = new ArrayList<>();
 
-    public Lecteur(Long numLecteur, String nom, String prenom, LocalDate dateNaiss, String mail, String adresse, String tel) {
-        this.numLecteur = numLecteur;
+    private List<Location> lloc=new ArrayList<>();
+
+    public Lecteur(int numlecteur, String nom, String prenom, LocalDate dateNaiss, String adresse, String mail, String tel) {
+        this.numlecteur = numlecteur;
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaiss = dateNaiss;
-        this.mail = mail;
         this.adresse = adresse;
+        this.mail = mail;
         this.tel = tel;
     }
 
-    public Lecteur(Long numLecteur, String nom, String prenom, LocalDate dateNaiss, String mail, String adresse, String tel, List<Exemplaire> exemplairesEnLocation, List<Exemplaire> exemplairesLoues) {
-        this.numLecteur = numLecteur;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.dateNaiss = dateNaiss;
-        this.mail = mail;
-        this.adresse = adresse;
-        this.tel = tel;
-        this.exemplairesEnLocation = exemplairesEnLocation;
-        this.exemplairesLoues = exemplairesLoues;
+    public int getNumlecteur() {
+        return numlecteur;
     }
 
-    public Long getNumLecteur() {
-        return numLecteur;
-    }
-
-    public void setNumLecteur(Long numLecteur) {
-        this.numLecteur = numLecteur;
+    public void setNumlecteur(int numlecteur) {
+        this.numlecteur = numlecteur;
     }
 
     public String getNom() {
         return nom;
     }
-
     public void setNom(String nom) {
         this.nom = nom;
     }
@@ -94,31 +81,37 @@ public class Lecteur {
         this.tel = tel;
     }
 
-    public List<Exemplaire> getExemplairesEnLocation() {
-        return exemplairesEnLocation;
+    public List<Location> getLloc() {
+        return lloc;
     }
 
-    public void setExemplairesEnLocation(List<Exemplaire> exemplairesEnLocation) {
-        this.exemplairesEnLocation = exemplairesEnLocation;
-    }
-
-    public List<Exemplaire> getExemplairesLoues() {
-        return exemplairesLoues;
-    }
-
-    public void setExemplairesLoues(List<Exemplaire> exemplairesLoues) {
-        this.exemplairesLoues = exemplairesLoues;
+    public void setLloc(List<Location> lloc) {
+        this.lloc = lloc;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Lecteur lecteur)) return false;
-        return Objects.equals(numLecteur, lecteur.numLecteur);
+        if (o == null || getClass() != o.getClass()) return false;
+        Lecteur lecteur = (Lecteur) o;
+        return numlecteur == lecteur.numlecteur;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numLecteur);
+        return Objects.hash(numlecteur);
+    }
+
+    @Override
+    public String toString() {
+        return "Lecteur{" +
+                "numlecteur=" + numlecteur +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", dateNaiss=" + dateNaiss +
+                ", adresse='" + adresse + '\'' +
+                ", mail='" + mail + '\'' +
+                ", tel='" + tel + '\'' +
+                '}';
     }
 }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32704de0-9f5d-4346-a00a-54174a52cbbd" name="Changes" comment="" />
+    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="correction1">
+      <change beforePath="$PROJECT_DIR$/src/Code/Exemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Exemplaire.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,19 +12,42 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2LAz8zDO5lM23VLnIQWSPRxGsuu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Salma/Desktop/API2/Projet_API2&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,9 +56,54 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675328524782</updated>
-      <workItem from="1675328527636" duration="2000" />
+      <workItem from="1675328527636" duration="1143000" />
+      <workItem from="1675360954872" duration="3692000" />
+      <workItem from="1675596800207" duration="1416000" />
+      <workItem from="1675600767213" duration="960000" />
+      <workItem from="1675842287082" duration="688000" />
+      <workItem from="1675855290320" duration="1246000" />
+      <workItem from="1675931336239" duration="4313000" />
     </task>
+    <task id="LOCAL-00001" summary="correction">
+      <created>1676209521457</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676209521457</updated>
+    </task>
+    <task id="LOCAL-00002" summary="correction">
+      <created>1676209633515</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676209633515</updated>
+    </task>
+    <task id="LOCAL-00003" summary="correction1">
+      <created>1676449382721</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676449382721</updated>
+    </task>
+    <task id="LOCAL-00004" summary="correction1">
+      <created>1676449463053</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676449463053</updated>
+    </task>
+    <task id="LOCAL-00005" summary="correction1">
+      <created>1676449497970</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676449497970</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -45,5 +115,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="correction" />
+    <MESSAGE value="correction1" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction1" />
   </component>
 </project>

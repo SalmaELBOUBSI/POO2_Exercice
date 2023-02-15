@@ -6,19 +6,22 @@ import java.util.List;
 
 public abstract class Ouvrage {
     protected String titre;
-    protected byte ageMin;
+    protected int ageMin;
     protected LocalDate dateParution;
-    protected String typeOuvrage;
-    protected Double prixLocation;
+    protected TypeOuvrage to;
+    protected double prixLocation;
     protected String langue;
     protected String genre;
-    List<Exemplaire> listerExemplaires = new ArrayList<>();
 
-    public Ouvrage(String titre, byte ageMin, LocalDate dateParution, String typeOuvrage, Double prixLocation, String langue, String genre) {
+    protected List<Auteur> lauteurs=new ArrayList<>();
+    protected List<Exemplaire> lex = new ArrayList<>();
+
+
+    public Ouvrage(String titre, int ageMin, LocalDate dateParution, TypeOuvrage to, double prixLocation, String langue, String genre) {
         this.titre = titre;
         this.ageMin = ageMin;
         this.dateParution = dateParution;
-        this.typeOuvrage = typeOuvrage;
+        this.to = to;
         this.prixLocation = prixLocation;
         this.langue = langue;
         this.genre = genre;
@@ -32,11 +35,11 @@ public abstract class Ouvrage {
         this.titre = titre;
     }
 
-    public byte getAgeMin() {
+    public int getAgeMin() {
         return ageMin;
     }
 
-    public void setAgeMin(byte ageMin) {
+    public void setAgeMin(int ageMin) {
         this.ageMin = ageMin;
     }
 
@@ -48,19 +51,19 @@ public abstract class Ouvrage {
         this.dateParution = dateParution;
     }
 
-    public String getTypeOuvrage() {
-        return typeOuvrage;
+    public TypeOuvrage getTo() {
+        return to;
     }
 
-    public void setTypeOuvrage(String typeOuvrage) {
-        this.typeOuvrage = typeOuvrage;
+    public void setTo(TypeOuvrage to) {
+        this.to = to;
     }
 
-    public Double getPrixLocation() {
+    public double getPrixLocation() {
         return prixLocation;
     }
 
-    public void setPrixLocation(Double prixLocation) {
+    public void setPrixLocation(double prixLocation) {
         this.prixLocation = prixLocation;
     }
 
@@ -80,11 +83,32 @@ public abstract class Ouvrage {
         this.genre = genre;
     }
 
-    public List<Exemplaire> getListerExemplaires() {
-        return listerExemplaires;
+    public List<Auteur> getLauteurs() {
+        return lauteurs;
     }
 
-    public void setListerExemplaires(List<Exemplaire> listerExemplaires) {
-        this.listerExemplaires = listerExemplaires;
+    public void setLauteurs(List<Auteur> lauteurs) {
+        this.lauteurs = lauteurs;
+    }
+
+    public List<Exemplaire> getLex() {
+        return lex;
+    }
+
+    public void setLex(List<Exemplaire> lex) {
+        this.lex = lex;
+    }
+
+    @Override
+    public String toString() {
+        return "Ouvrage{" +
+                "titre='" + titre + '\'' +
+                ", ageMin=" + ageMin +
+                ", dateParution=" + dateParution +
+                ", to=" + to +
+                ", prixLocation=" + prixLocation +
+                ", langue='" + langue + '\'' +
+                ", genre='" + genre + '\'' +
+                '}';
     }
 }

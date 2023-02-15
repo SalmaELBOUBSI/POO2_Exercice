@@ -36,4 +36,13 @@ public class Mail {
     public void setDateEnvoi(LocalDateTime dateEnvoi) {
         this.dateEnvoi = dateEnvoi;
     }
+
+    @Override
+    public String toString() {
+        return "Mail{" +
+                "objet='" + objet + '\'' +
+                ", message='" + message + '\'' +
+                ", dateEnvoi='" + dateEnvoi + '\'' +
+                '}';
+    }
 }

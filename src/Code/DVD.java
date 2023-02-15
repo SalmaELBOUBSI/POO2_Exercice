@@ -7,35 +7,33 @@ import java.util.List;
 import java.util.Objects;
 
 public class DVD extends Ouvrage {
-    private Long code;
-    private LocalTime dureeTotal;
-    private byte nbreBonus;
-    List<String> autresLangues =new ArrayList<>();
-    List<String> sousTitres =new ArrayList<>();
 
-    public DVD(String titre, byte ageMin, LocalDate dateParution, String typeOuvrage, Double prixLocation, String langue, String genre, Long code, LocalTime dureeTotal, byte nbreBonus, List<String> autresLangues, List<String> sousTitres) {
-        super(titre, ageMin, dateParution, typeOuvrage, prixLocation, langue, genre);
-        this.code = code;
-        this.dureeTotal = dureeTotal;
-        this.nbreBonus = nbreBonus;
-        this.autresLangues = autresLangues;
-        this.sousTitres = sousTitres;
+    private long code;
+    private String dureeTotale;
+    private byte nbreBonus;
+    private List<String> autresLangues=new ArrayList<>();
+    private List<String> sousTitres=new ArrayList<>();
+    public DVD(String titre, int ageMin, LocalDate dateParution, double prixLocation, String langue, String genre,long code,String dureeTotale,byte nbreBonus) {
+        super(titre, ageMin, dateParution, TypeOuvrage.DVD, prixLocation, langue, genre);
+        this.code=code;
+        this.dureeTotale=dureeTotale;
+        this.nbreBonus=nbreBonus;
     }
 
-    public Long getCode() {
+    public long getCode() {
         return code;
     }
 
-    public void setCode(Long code) {
+    public void setCode(long code) {
         this.code = code;
     }
 
-    public LocalTime getDureeTotal() {
-        return dureeTotal;
+    public String getDureeTotale() {
+        return dureeTotale;
     }
 
-    public void setDureeTotal(LocalTime dureeTotal) {
-        this.dureeTotal = dureeTotal;
+    public void setDureeTotale(String dureeTotale) {
+        this.dureeTotale = dureeTotale;
     }
 
     public byte getNbreBonus() {
@@ -54,23 +52,35 @@ public class DVD extends Ouvrage {
         this.autresLangues = autresLangues;
     }
 
-    public List<String> getSousTitre() {
+    public List<String> getSousTitres() {
         return sousTitres;
     }
 
-    public void setSousTitre(List<String> sousTitre) {
-        this.sousTitres = sousTitre;
+    public void setSousTitres(List<String> sousTitres) {
+        this.sousTitres = sousTitres;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof DVD dvd)) return false;
-        return Objects.equals(code, dvd.code);
+        if (o == null || getClass() != o.getClass()) return false;
+        DVD dvd = (DVD) o;
+        return code == dvd.code;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(code);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"DVD{" +
+                "code=" + code +
+                ", dureeTotale='" + dureeTotale + '\'' +
+                ", nbreBonus=" + nbreBonus +
+                ", autresLangues=" + autresLangues +
+                ", sousTitres=" + sousTitres +
+                "} " + super.toString();
     }
 }

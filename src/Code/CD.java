@@ -8,13 +8,13 @@ import java.util.Objects;
 public class CD extends Ouvrage {
     private long code;
     private byte nbrePlages;
-    private LocalTime dureeTotal;
+    private String dureeTotale;
 
-    public CD(String titre, byte ageMin, LocalDate dateParution, String typeOuvrage, Double prixLocation, String langue, String genre, long code, byte nbrePlages, LocalTime dureeTotal) {
-        super(titre, ageMin, dateParution, typeOuvrage, prixLocation, langue, genre);
-        this.code = code;
-        this.nbrePlages = nbrePlages;
-        this.dureeTotal = dureeTotal;
+    public CD(String titre, int ageMin, LocalDate dateParution,double prixLocation, String langue, String genre,long code,byte nbrePlages,String dureeTotale) {
+        super(titre, ageMin, dateParution, TypeOuvrage.CD, prixLocation, langue, genre);
+        this.code=code;
+        this.nbrePlages=nbrePlages;
+        this.dureeTotale=dureeTotale;
     }
 
     public long getCode() {
@@ -33,24 +33,34 @@ public class CD extends Ouvrage {
         this.nbrePlages = nbrePlages;
     }
 
-    public LocalTime getDureeTotal() {
-        return dureeTotal;
+    public String getDureeTotale() {
+        return dureeTotale;
     }
 
-    public void setDureeTotal(LocalTime dureeTotal) {
-        this.dureeTotal = dureeTotal;
+    public void setDureeTotale(String dureeTotale) {
+        this.dureeTotale = dureeTotale;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof CD cd)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
+        CD cd = (CD) o;
         return code == cd.code;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(code);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"CD{" +
+                "code=" + code +
+                ", nbrePlages=" + nbrePlages +
+                ", dureeTotale='" + dureeTotale + '\'' +
+                "} " + super.toString();
     }
 }
 

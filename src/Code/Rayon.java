@@ -38,6 +38,14 @@ public class Rayon {
         this.genre = genre;
     }
 
+    public List<Exemplaire> getListerExemplaires() {
+        return listerExemplaires;
+    }
+
+    public void setListerExemplaires(List<Exemplaire> listerExemplaires) {
+        this.listerExemplaires = listerExemplaires;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -48,5 +56,13 @@ public class Rayon {
     @Override
     public int hashCode() {
         return Objects.hash(codeRayon);
+    }
+
+    @Override
+    public String toString() {
+        return "Rayon{" +
+                "codeRayon='" + codeRayon + '\'' +
+                ", genre='" + genre + '\'' +
+                '}';
     }
 }
