@@ -27,6 +27,9 @@ public class GestionBiblio {
         System.out.println(lec);
         System.out.println(loc);
 
+        a.addOuvrage(l);
+        a.suppOuvrage("Vingt mille lieues sous les mers");
+
     }
 
     private static List<Auteur> laut = new ArrayList<>();

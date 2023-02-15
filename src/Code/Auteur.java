@@ -40,14 +40,24 @@ public class Auteur {
         this.nationalite = nationalite;
     }
 
-    public List<Ouvrage> getLOuvrages() {
-        return lOuvrages;
-    }
+    public List<Ouvrage> getLOuvrages() {return lOuvrages;}
 
     public void setLOuvrages(List<Ouvrage> lOuvrages) {
         this.lOuvrages = lOuvrages;
     }
 
+    public void addOuvrage(Ouvrage ouvrage){
+        this.getLOuvrages().add(ouvrage);
+    }
+
+    public void suppOuvrage(String titre){
+        for(int i=0;i<lOuvrages.size();i++){
+            if(lOuvrages.get(i).getTitre().equals(titre)){
+                lOuvrages.remove(i);
+                break;
+            }
+        }
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

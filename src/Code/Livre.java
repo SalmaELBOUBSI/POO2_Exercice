@@ -1,6 +1,7 @@
 package Code;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
 
 public class Livre extends Ouvrage {
@@ -50,6 +51,9 @@ public class Livre extends Ouvrage {
     public void setResume(String resume) {
         this.resume = resume;
     }
+
+
+
 
     @Override
     public boolean equals(Object o) {
