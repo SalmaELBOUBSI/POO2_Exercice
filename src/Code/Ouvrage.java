@@ -99,6 +99,9 @@ public abstract class Ouvrage {
         this.lex = lex;
     }
 
+    public void listerExemplaire(boolean enLocation){
+        //TODO encoder en location
+    }
     @Override
     public String toString() {
         return "Ouvrage{" +

@@ -53,7 +53,9 @@ public class Livre extends Ouvrage {
     }
 
 
-
+    public void ammendeRetard(int njours){
+        //TODO encoder les amende de jour de retard pour les livres
+    }
 
     @Override
     public boolean equals(Object o) {

@@ -65,6 +65,13 @@ public class Location {
         this.exemplaire = exemplaire;
     }
 
+    public void calculerAmende(){
+        //TODO calculer les amende
+    }
+
+    public void enregistrerRetour(){
+        //TODO enregistrement des retour
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

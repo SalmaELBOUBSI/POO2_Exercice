@@ -2,6 +2,7 @@ package Code;
 
 import javax.xml.transform.sax.SAXResult;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
@@ -46,6 +47,17 @@ public class Rayon {
         this.listerExemplaires = listerExemplaires;
     }
 
+    public List<Exemplaire> listerExmplaire(){
+        //TODO lister les exemplaire dans chaque rayon
+        return null;
+    }
+    public void addExemplaire(Exemplaire e) {
+        this.listerExemplaires.add(e);
+        e.setRayon(this);
+    }
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -65,4 +77,7 @@ public class Rayon {
                 ", genre='" + genre + '\'' +
                 '}';
     }
+
+
+
 }

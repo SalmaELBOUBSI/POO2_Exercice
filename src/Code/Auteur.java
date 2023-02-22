@@ -46,8 +46,19 @@ public class Auteur {
         this.lOuvrages = lOuvrages;
     }
 
-    public void addOuvrage(Ouvrage ouvrage){
-        this.getLOuvrages().add(ouvrage);
+    public void addOuvrage(Ouvrage o){
+        lOuvrages.add(o);
+        o.getLauteurs().add(this);
+    }
+
+    public List<Ouvrage> listerOuvrages(TypeOuvrage to,TypeLivre typeLivre){
+        //TODO coder type de l'ouvre et un type de livre
+        return null;
+    }
+
+    public List<Ouvrage> listerOuvrage(String genre){
+        //TODO coder le genre d'ouvrage
+        return null;
     }
 
     public void suppOuvrage(String titre){

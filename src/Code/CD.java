@@ -41,6 +41,9 @@ public class CD extends Ouvrage {
         this.dureeTotale = dureeTotale;
     }
 
+    public void ammendeRetard(int njours){
+        //TODO encoder les amende de jour de retard pour les CD
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

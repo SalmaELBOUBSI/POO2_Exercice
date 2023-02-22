@@ -62,6 +62,20 @@ public class Exemplaire {
         this.lloc = lloc;
     }
 
+    public void modifierEtat(String descriptionEtat){
+        //TODO encoder l'etat
+    }
+
+    public void lecteurActuel(){
+
+    }
+
+    public void lecteur(){
+        //TODO encoder lecteur
+    }
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

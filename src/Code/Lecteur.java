@@ -89,6 +89,15 @@ public class Lecteur {
         this.lloc = lloc;
     }
 
+    public List<Location> listerExplEnLoc(){
+        //TODO lister les exemplaires en location
+        return null;
+    }
+
+    public List<Location> listerExpLoues(){
+        //TODO lister les exemplaires loué
+        return null;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

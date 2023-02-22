@@ -60,6 +60,9 @@ public class DVD extends Ouvrage {
         this.sousTitres = sousTitres;
     }
 
+    public void ammendeRetard(int njours){
+        //TODO encoder les amende de jour de retard pour les DVD
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
