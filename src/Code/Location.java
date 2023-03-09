@@ -1,36 +1,36 @@
 package Code;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 
 public class Location {
-    private LocalDate dateLoc;
+    private LocalDate dateLocation;
     private LocalDate dateRestitution;
-    private Double amende;
-
     private Lecteur loueur;
-
     private Exemplaire exemplaire;
+
+    public Location(LocalDate dateLocation, LocalDate dateRestitution, Lecteur loueur, Exemplaire exemplaire) {
+        this.dateLocation = dateLocation;
+        this.dateRestitution = dateRestitution;
+        this.loueur = loueur;
+        this.exemplaire = exemplaire;
+        this.loueur.getLloc().add(this);
+        this.exemplaire.getLloc().add(this);
+    }
 
     public Location(Lecteur loueur, Exemplaire exemplaire) {
         this.loueur = loueur;
         this.exemplaire = exemplaire;
+        this.dateLocation=LocalDate.now();
     }
 
-    public Location(LocalDate dateLoc, LocalDate dateRestitution, Double amende, Lecteur loueur, Exemplaire exemplaire) {
-        this.dateLoc = dateLoc;
-        this.dateRestitution = dateRestitution;
-        this.amende = amende;
-        this.loueur = loueur;
-        this.exemplaire = exemplaire;
+    public LocalDate getDateLocation() {
+        return dateLocation;
     }
 
-    public LocalDate getDateLoc() {
-        return dateLoc;
-    }
-
-    public void setDateLoc(LocalDate dateLoc) {
-        this.dateLoc = dateLoc;
+    public void setDateLocation(LocalDate dateLocation) {
+        this.dateLocation = dateLocation;
     }
 
     public LocalDate getDateRestitution() {
@@ -39,14 +39,6 @@ public class Location {
 
     public void setDateRestitution(LocalDate dateRestitution) {
         this.dateRestitution = dateRestitution;
-    }
-
-    public Double getAmende() {
-        return amende;
-    }
-
-    public void setAmende(Double amende) {
-        this.amende = amende;
     }
 
     public Lecteur getLoueur() {
@@ -65,33 +57,41 @@ public class Location {
         this.exemplaire = exemplaire;
     }
 
-    public void calculerAmende(){
-        //TODO calculer les amende
-    }
-
-    public void enregistrerRetour(){
-        //TODO enregistrement des retour
-    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Location location = (Location) o;
-        return Objects.equals(dateLoc, location.dateLoc) && Objects.equals(loueur, location.loueur) && Objects.equals(exemplaire, location.exemplaire);
+        return Objects.equals(dateLocation, location.dateLocation) && Objects.equals(loueur, location.loueur) && Objects.equals(exemplaire, location.exemplaire);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(dateLoc, loueur, exemplaire);
+        return Objects.hash(dateLocation, loueur, exemplaire);
     }
 
     @Override
     public String toString() {
         return "Location{" +
-                "dateLoc=" + dateLoc +
+                "dateLocation=" + dateLocation +
                 ", dateRestitution=" + dateRestitution +
                 ", loueur=" + loueur +
                 ", exemplaire=" + exemplaire +
                 '}';
+    }
+
+    public double calculerAmende(){
+        if(dateRestitution!=null){
+            LocalDate dateLim = dateLocation.plusDays(exemplaire.getOuvrage().njlocmax());
+            if(dateRestitution.isAfter(dateLim)){
+                int njretard = (int) ChronoUnit.DAYS.between(dateLim, dateRestitution);
+                return exemplaire.getOuvrage().amendeRetard(njretard);
+            }
+        }
+        return 0;
+    }
+
+    public void enregistrerRetour(){
+        if(dateRestitution==null) dateRestitution=LocalDate.now();//test sur nul pour éviter d'enregistrer retour 2 fois
     }
 }

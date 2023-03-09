@@ -8,9 +8,9 @@ import java.util.Objects;
 public class CD extends Ouvrage {
     private long code;
     private byte nbrePlages;
-    private String dureeTotale;
+    private LocalTime dureeTotale;
 
-    public CD(String titre, int ageMin, LocalDate dateParution,double prixLocation, String langue, String genre,long code,byte nbrePlages,String dureeTotale) {
+    public CD(String titre, int ageMin, LocalDate dateParution, double prixLocation, String langue, String genre, long code, byte nbrePlages, LocalTime dureeTotale) {
         super(titre, ageMin, dateParution, TypeOuvrage.CD, prixLocation, langue, genre);
         this.code=code;
         this.nbrePlages=nbrePlages;
@@ -33,17 +33,14 @@ public class CD extends Ouvrage {
         this.nbrePlages = nbrePlages;
     }
 
-    public String getDureeTotale() {
+    public LocalTime getDureeTotale() {
         return dureeTotale;
     }
 
-    public void setDureeTotale(String dureeTotale) {
+    public void setDureeTotale(LocalTime dureeTotale) {
         this.dureeTotale = dureeTotale;
     }
 
-    public void ammendeRetard(int njours){
-        //TODO encoder les amende de jour de retard pour les CD
-    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -56,6 +53,16 @@ public class CD extends Ouvrage {
     public int hashCode() {
         return Objects.hash(code);
     }
+    @Override
+    public double amendeRetard(int njours) {
+
+        return njours*0.50;
+    }
+
+    @Override
+    public int njlocmax() {
+        return 7;
+    }
 
     @Override
     public String toString() {
@@ -63,7 +70,7 @@ public class CD extends Ouvrage {
                 "code=" + code +
                 ", nbrePlages=" + nbrePlages +
                 ", dureeTotale='" + dureeTotale + '\'' +
-                "} " + super.toString();
+                "} " ;
     }
 }
 

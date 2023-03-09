@@ -11,14 +11,13 @@ public class Livre extends Ouvrage {
     private String resume;
 
 
-    public Livre(String titre, int ageMin, LocalDate dateParution, double prixLocation, String langue, String genre,String isbn,int nbrePages,TypeLivre tl,String resume) {
+    public Livre(String titre, int ageMin, LocalDate dateParution, double prixLocation, String langue, String genre, String isbn, int nbrePages, TypeLivre tl, String resume) {
         super(titre, ageMin, dateParution, TypeOuvrage.LIVRE, prixLocation, langue, genre);
         this.isbn=isbn;
         this.nbrePages=nbrePages;
         this.tl=tl;
         this.resume=resume;
     }
-
 
     public String getIsbn() {
         return isbn;
@@ -52,11 +51,6 @@ public class Livre extends Ouvrage {
         this.resume = resume;
     }
 
-
-    public void ammendeRetard(int njours){
-        //TODO encoder les amende de jour de retard pour les livres
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -71,12 +65,23 @@ public class Livre extends Ouvrage {
     }
 
     @Override
+    public double amendeRetard(int njours) {
+
+        return njours*0.25;
+    }
+
+    @Override
+    public int njlocmax() {
+        return 15;
+    }
+
+    @Override
     public String toString() {
         return super.toString()+ "Livre{" +
                 "isbn='" + isbn + '\'' +
                 ", nbrePages=" + nbrePages +
                 ", tl=" + tl +
                 ", resume='" + resume + '\'' +
-                "} " + super.toString();
+                "} " ;
     }
 }
