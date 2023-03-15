@@ -5,10 +5,7 @@ import Code.Ouvrage;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class DVDFactoryBeta {
     protected Scanner sc= new Scanner(System.in);
@@ -36,18 +33,28 @@ public class DVDFactoryBeta {
         byte nbreBonus= sc.nextByte();
         DVD dvd =new DVD(titre,ageMin,dp,ploc,langue,genre,code,dureeTotale,nbreBonus);
         System.out.println("autres langues");
-        List<String> langues = new ArrayList<>(Arrays.asList("anglais","français","italien","allemand","fin"));
+        Set<String> langues = new HashetSet<>();
         int choix;
         do{
-            choix=Utilitaire.choixListe(langues);
+            choix=Utilitaire.choixListe(new ArrayList<>(langues));
             if(choix==langues.size())break;
-            dvd.getAutresLangues().add(langues.get(choix-1));//TODO vérifier unicité ou utiliser set et pas de doublon avec langue d'origine
+            String langue = new ArrayList<>(langues).get(choix - 1);//TODO vérifier unicité ou utiliser set et pas de doublon avec langue d'origine
+            if (!dvd.getAutresLangues().contains(langue)) {
+                dvd.getAutresLangues().add(langue);
+            } else {
+                System.out.println("Cette langue est déjà présente !");
+            }
         }while(true);
         System.out.println("sous-titres");
         do{
             choix=Utilitaire.choixListe(langues);
             if(choix==langues.size())break;
-            dvd.getSousTitres().add(langues.get(choix-1));//TODO vérifier unicité ou utiliser set
+            String sousTitre = langues.get(choix-1);
+            if (!sousTitre.contains(sousTitre)) {
+                sousTitre.add(sousTitre);
+            } else {
+                System.out.println("Ce sous-titre est déjà présent !");
+            }//TODO vérifier unicité ou utiliser set
         }while(true);
         return dvd;
     }

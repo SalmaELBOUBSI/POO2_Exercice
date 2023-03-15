@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="exercice TODO, add , menu">
-      <change afterPath="$PROJECT_DIR$/src/gestion/Gestion.java" afterDir="false" />
+    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="Correction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Auteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Exemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Exemplaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/GestionBiblio.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Code/Lecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Lecteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Livre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Livre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Mail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Ouvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Ouvrage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Rayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Rayon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gestion/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gestion/Gestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/DVDFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/DVDFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/DVDFactoryBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/DVDFactoryBeta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,17 +44,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Salma/Desktop/API2/Projet_API2",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Salma/Desktop/API2/Projet_API2&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -81,7 +73,9 @@
       <workItem from="1676469451458" duration="950000" />
       <workItem from="1676478197610" duration="4550000" />
       <workItem from="1676532628561" duration="12599000" />
-      <workItem from="1678354696043" duration="3088000" />
+      <workItem from="1678354696043" duration="4551000" />
+      <workItem from="1678632174885" duration="19000" />
+      <workItem from="1678900341389" duration="2820000" />
     </task>
     <task id="LOCAL-00001" summary="correction">
       <created>1676209521457</created>
@@ -139,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677067820196</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Correction">
+      <created>1678359885756</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678359885756</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Correction">
+      <created>1678359904558</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678359904558</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +169,7 @@
     <MESSAGE value="correction1" />
     <MESSAGE value="exercice add + remove" />
     <MESSAGE value="exercice TODO, add , menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="exercice TODO, add , menu" />
+    <MESSAGE value="Correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction" />
   </component>
 </project>
