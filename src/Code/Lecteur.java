@@ -121,15 +121,11 @@ public class Lecteur {
         return lex;
     }
 
-    public List<Exemplaire> listerExemplairesLoues(){
-        List<Exemplaire> lex = new ArrayList<>();
-        for(Location loc : lloc) {
-            lex.add(loc.getExemplaire());
-            //TODO empêcher doublon si exemplaire loué plusieurs fois par même lecteur
-            if (!lex.contains(listerExemplairesLoues())) {
-                lex.add((Exemplaire) lex);
-            }
+    public Set<Exemplaire> listerExemplairesLoues(){
+        Set<Exemplaire> stex = new HashSet<>();
+        for(Location loc : lloc){
+            stex.add(loc.getExemplaire());
         }
-        return lex;
+        return stex;
     }
 }
