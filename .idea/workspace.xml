@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="todo util et code">
+    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="correction avec MVP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Lecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Lecteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/DAOLecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/DAOLecteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/LecteurModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/LecteurModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/LecteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/LecteurPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/GestBiblio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/GestBiblio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +74,7 @@
       <workItem from="1678354696043" duration="4551000" />
       <workItem from="1678632174885" duration="19000" />
       <workItem from="1678900341389" duration="3301000" />
-      <workItem from="1678959775398" duration="2513000" />
+      <workItem from="1678959775398" duration="5895000" />
     </task>
     <task id="LOCAL-00001" summary="correction">
       <created>1676209521457</created>
@@ -157,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678903732651</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="correction avec MVP">
+      <created>1678962796260</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678962796260</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +184,7 @@
     <MESSAGE value="exercice TODO, add , menu" />
     <MESSAGE value="Correction" />
     <MESSAGE value="todo util et code" />
-    <option name="LAST_COMMIT_MESSAGE" value="todo util et code" />
+    <MESSAGE value="correction avec MVP" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction avec MVP" />
   </component>
 </project>
