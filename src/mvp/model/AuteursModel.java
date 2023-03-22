@@ -15,7 +15,7 @@ public class AuteursModel implements DAOAuteurs{
         boolean present= auteurs.contains(auteur);
         if(!present){
             numaut++;
-            //auteurs.set(numaut);
+            //auteurs.set(numaut++);
             auteurs.add(auteur);
             return auteur;
         }

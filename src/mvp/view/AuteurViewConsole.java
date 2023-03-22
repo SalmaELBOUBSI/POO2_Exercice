@@ -60,7 +60,31 @@ public class AuteurViewConsole implements AuteurViewInterface{
     }
 
     private void modifier() {
-        //TODO choisir elt et demander les nouvelles valeurs puis appeler méthode maj(lecteur) (à développer) du presenter
+        int choix = Utilitaire.choixElt(laut);
+        Auteur auteur = laut.get(choix-1);
+
+        System.out.println("Entrez le nouveau nom :");
+        String nom = sc.nextLine();
+        if (!nom.isEmpty()) {
+            auteur.setNom(nom);
+        }
+
+        System.out.println("Entrez le nouveau prénom  :");
+        String prenom = sc.nextLine();
+        if (!prenom.isEmpty()) {
+            auteur.setPrenom(prenom);
+        }
+
+        System.out.println("Entrez la nouvelle nationalité  :");
+        String nationalite = sc.nextLine();
+        if (!nationalite.isEmpty()) {
+            auteur.setNationalite(nationalite);
+        }
+
+        Auteur nouveauAuteur = new Auteur(nom, prenom, nationalite);
+
+        presenter.majAuteur(auteur,nouveauAuteur);
+
     }
 
     private void retirer() {

@@ -40,4 +40,15 @@ public class AuteursPresenter {
         List<Auteur> auteurs = model.getAuteurs();
         view.setListDatas(auteurs);
     }
+
+    public void majAuteur(Auteur ancienAuteur, Auteur nouveauAuteur) {
+        if (auteurs.contains(ancienAuteur)) {
+            int index = auteurs.indexOf(ancienAuteur);
+            auteurs.set(index, nouveauAuteur);
+            view.setListDatas(auteurs);
+            view.affMsg("L'auteur a été modifié avec succès !");
+        } else {
+            view.affMsg("L'auteur à modifier n'a pas été trouvé !");
+        }
+    }
 }
