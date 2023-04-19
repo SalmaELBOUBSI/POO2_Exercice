@@ -6,28 +6,35 @@ import mvp.presenter.AuteursPresenter;
 import mvp.presenter.LecteurPresenter;
 import mvp.presenter.RayonPresenter;
 import mvp.view.*;
+import utilitaires.Utilitaire;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class GestBiblio {
+    private DAOLecteur lm;
+    private LecteurViewInterface lv;
+    private LecteurPresenter lp;
+
+
+
+    public void gestion(){
+        lm = new LecteurModel();
+        lv = new LecteurViewConsole();
+        lp = new LecteurPresenter(lm, lv);//création et injection de dépendance
+
+        List<String> loptions = Arrays.asList("lecteurs","fin");
+        do {
+            int ch = Utilitaire.choixListe(loptions);
+            switch (ch){
+                case 1: lp.start();
+                    break;
+                case 2 : System.exit(0);
+            }
+        }while(true);
+    }
     public static void main(String[] args) {
-        DAOLecteur lm = new LecteurModel();
-
-        LecteurViewInterface lv = new LecteurViewConsole();
-
-        LecteurPresenter lp = new LecteurPresenter(lm, lv);//création et injection de dépendance
-        lp.start();
-
-        DAOAuteurs am = new AuteursModel();
-        AuteurViewInterface av = new AuteurViewConsole();
-        AuteursPresenter ap = new AuteursPresenter(am,av);
-        lp.start();
-
-        DAORayon rm = new RayonModel();
-        RayonViewInterface rv = new RayonViewConsole();
-        RayonPresenter rp = new RayonPresenter(rm,rv);
-        lp.start();
-
-
+        GestBiblio gb = new GestBiblio();
+        gb.gestion();
     }
 }

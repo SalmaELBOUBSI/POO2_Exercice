@@ -1,5 +1,6 @@
 package mvp.view;
 
+import Code.Exemplaire;
 import Code.Lecteur;
 import mvp.presenter.LecteurPresenter;
 import utilitaires.Utilitaire;
@@ -16,4 +17,7 @@ public interface LecteurViewInterface {
     public void setListDatas(List<Lecteur> lecteurs);
 
     public void affMsg(String msg);
+
+
+    void affList(List<Exemplaire> lex);
 }

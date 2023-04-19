@@ -1,7 +1,6 @@
 package mvp.model;
 
-import Code.Auteur;
-import Code.Lecteur;
+import Code.*;
 
 import java.util.List;
 
@@ -11,4 +10,9 @@ public interface DAOAuteurs {
     boolean removeAuteurs(Auteur auteur);
 
     List<Auteur> getAuteurs();
+
+    Auteur updateAuteur(Auteur auteur);
+
+    Auteur readAuteur(String NAuteur);
+
 }

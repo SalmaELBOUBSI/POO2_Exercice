@@ -86,7 +86,7 @@ public class OuvrageViewConsole implements OuvrageViewInterface{
         System.out.println("Gentre ");
         String genre = sc.nextLine();
         Ouvrage ouvrage = new Ouvrage(titre,agemin,dp,type,prixLoc,langue,genre);
-        presenter.addAuteurs(auteur);
+        presenter.addOuvrages(ouvrage);
     }
 
     private void modifier() {
