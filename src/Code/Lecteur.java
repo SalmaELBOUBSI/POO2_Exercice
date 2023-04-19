@@ -13,7 +13,14 @@ public class Lecteur {
 
     private List<Location> lloc=new ArrayList<>();
 
-    public Lecteur(int numlecteur, String nom, String prenom, LocalDate dn, String adresse, String mail, String tel) {
+    public Lecteur(int numlecteur, String nom, String prenom, LocalDate dn, String adresse, String mail, String tel) throws Exception{
+
+        if(numlecteur >=0) throw new Exception("Numero trop petit");
+        if(nom.trim().equals("")) throw new Exception("Nom vide");
+        if(prenom.trim().equals("")) throw new Exception("Prenom vide");
+        if(adresse.trim().equals("")) throw new Exception("adresse vide");
+        if(tel.trim().equals("")) throw new Exception("Telephone vide");
+
         this.numlecteur = numlecteur;
         this.nom = nom;
         this.prenom = prenom;
