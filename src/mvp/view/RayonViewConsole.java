@@ -10,82 +10,45 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class RayonViewConsole implements RayonViewInterface {
-    private RayonPresenter presenter;
-    private List<Rayon> lray;
-    private Scanner sc = new Scanner(System.in);
+import static utilitaires.Utilitaire.affListe;
 
-    public RayonViewConsole() {
+public class RayonViewConsole extends AbstractViewConsole {
+    @Override
+    protected void rechercher() {
+        System.out.println("code du rayon : ");
+        String code = sc.nextLine();
+        Rayon rech = new Rayon(code);
+        presenter.search(rech);
+    }
+
+    @Override
+    protected void modifier() {
 
     }
 
     @Override
-    public void setPresenter(RayonPresenter presenter) {
-        this.presenter = presenter;
-    }
-
-    @Override
-    public void setListDatas(List<Rayon> rayons) {
-        this.lray = rayons;
-        Utilitaire.affListe(lray);
-        menu();
-    }
-
-    @Override
-    public void affMsg(String msg) {
-        System.out.println("information:" + msg);
-    }
-
-    public void menu() {
-        List options = new ArrayList<>(Arrays.asList("ajouter", "retirer", "modifier", "fin"));
+    protected void ajouter() {
+        Rayon r =null;
         do {
-            int ch = Utilitaire.choixListe(options);
-
-            switch (ch) {
-                case 1:
-                    ajouter();
-                    break;
-                case 2:
-                    retirer();
-                    break;
-                case 3:
-                    modifier();
-                    break;
-                case 4:
-                    System.exit(0);
+            try {
+                System.out.println("code rayon ");
+                String code = sc.nextLine();
+                System.out.println("genre ");
+                String genre = sc.nextLine();
+                r = new Rayon(code, genre);
+                break;
             }
-        } while (true);
+            catch (Exception e){
+                System.out.println("une erreur est survenue : "+e);
+            }
+        }while(true);
+        presenter.add(r);
+        ldatas=presenter.getAll();//rafraichissement
+        affListe(ldatas);
     }
 
-    private void modifier() {
-        //TODO choisir elt et demander les nouvelles valeurs puis appeler méthode maj(lecteur) (à développer) du presenter
-    }
+    @Override
+    protected void special() {
 
-    private void retirer() {
-        int choix = Utilitaire.choixElt(lray);
-        Rayon rayon = lray.get(choix-1);
-        presenter.removeRayon(rayon);
-    }
-
-
-    private void ajouter() throws Exception {
-        System.out.println("Code rayon ");
-        String cr;
-        try {
-            cr = sc.nextLine();
-        }catch (Exception e){
-            System.out.println("Code du rayon invalide!");
-            return;
-        }
-        System.out.println("Genre  ");
-        String genre;
-        try {
-            genre = sc.nextLine();
-        }catch (Exception e){
-            System.out.println("Genre invalide!");
-            return;
-        }
-        Rayon ray = new Rayon(cr,genre);
-        presenter.addRayon(ray);
     }
 }

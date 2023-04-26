@@ -21,7 +21,7 @@ public class Gestion {
     private List<Location> lloc = new ArrayList<>();
 
 
-    public void populate(){
+    public void populate() throws Exception {
         Auteur a = new Auteur("Verne","Jules","France");
         laut.add(a);
 
@@ -81,7 +81,7 @@ public class Gestion {
         lloc.add(loc);
     }
 
-    private void menu() {
+    private void menu() throws Exception {
         List options = new ArrayList<>(Arrays.asList("auteurs","ouvrages","exemplaires","rayons","lecteurs","locations","restitution","fin"));
         do{
             int choix = Utilitaire.choixListe(options);
@@ -118,7 +118,7 @@ public class Gestion {
         lloc.add(new Location(lec,ex));
     }
 
-    private void gestLecteurs() {
+    private void gestLecteurs() throws Exception {
         System.out.println("numéro");
         int num=sc.nextInt();
         sc.skip("\n");
@@ -144,7 +144,7 @@ public class Gestion {
 
     }
 
-    private void gestRayons() {
+    private void gestRayons() throws Exception {
         System.out.println("code ");
         String code=sc.next();
         System.out.println("genre ");
@@ -155,7 +155,7 @@ public class Gestion {
         //TODO attribuer exemplaire, les exemplaires sont triés par ordre de titre de l'ouvrage , empêcher doublons sur l'exemplaire
     }
 
-    private void gestExemplaires() {
+    private void gestExemplaires() throws Exception {
         System.out.println("matricule ");
         String mat=sc.next();
         System.out.println("etat  ");
@@ -252,7 +252,7 @@ public class Gestion {
         //TODO attribuer auteurs, les auteur sont triés par odre de nom et prénom, empêcher doublons
     }
 
-    private void gestAuteurs() {
+    private void gestAuteurs() throws Exception {
         System.out.println("nom ");
         String nom=sc.nextLine();
         System.out.println("prénom ");
@@ -265,7 +265,7 @@ public class Gestion {
         //TODO attribuer ouvrages , les ouvrages sont triés par ordre de titre
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Gestion g = new Gestion();
         g.populate();
         g.menu();

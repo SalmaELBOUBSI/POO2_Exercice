@@ -4,7 +4,7 @@ import Code.Auteur;
 import Code.Ouvrage;
 import Code.TypeOuvrage;
 import mvp.presenter.OuvragePresenter;
-import utilitaires.Utilitaire;
+import utilitaires.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -12,126 +12,31 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class OuvrageViewConsole implements OuvrageViewInterface{
-    private OuvragePresenter presenter;
-    private List<Ouvrage> louv;
-    private Scanner sc = new Scanner(System.in);
-
-    public OuvrageViewConsole() {
+public class OuvrageViewConsole extends AbstractViewConsole<Ouvrage>{
+    @Override
+    protected void rechercher() {
 
     }
 
     @Override
-    public void setPresenter(OuvragePresenter presenter) {
-        this.presenter = presenter;
+    protected void modifier() {
+
     }
 
     @Override
-    public void setListDatas(List<Ouvrage> ouvrages) {
-        this.louv = ouvrages;
-        Utilitaire.affListe(louv);
-        menu();
+    protected void ajouter() {
+        TypeOuvrage[] tto = TypeOuvrage.values();
+        List<TypeOuvrage> lto = new ArrayList<>(Arrays.asList(tto));
+        int choix = Utilitaire.choixListe(lto);
+        Ouvrage o = null;
+        List<OuvrageFactory> lof = new ArrayList<>(Arrays.asList(new LivreFactory(),new CDFactory(),new DVDFactory()));
+        o = lof.get(choix-1).create();
+        presenter.add(o);
+        //TODO attribuer auteurs, les auteur sont triés par odre de nom et prénom, empêcher doublons
     }
 
     @Override
-    public void affMsg(String msg) {
-        System.out.println("information:" + msg);
-    }
+    protected void special() {
 
-    public void menu() {
-        List options = new ArrayList<>(Arrays.asList("ajouter", "retirer", "modifier", "fin"));
-        do {
-            int ch = Utilitaire.choixListe(options);
-
-            switch (ch) {
-                case 1:
-                    ajouter();
-                    break;
-                case 2:
-                    retirer();
-                    break;
-                case 3:
-                    modifier();
-                    break;
-                case 4:
-                    System.exit(0);
-            }
-        } while (true);
-    }
-
-    private void retirer() {
-        int choix = Utilitaire.choixElt(louv);
-        Ouvrage ouvrage = louv.get(choix-1);
-        presenter.removeOuvrages(ouvrage);
-    }
-
-    private void ajouter() throws Exception {
-        System.out.println("Titre ");
-        String titre;
-        try {
-            titre = sc.nextLine();
-        }catch (Exception e){
-            System.out.println("Titre invalide !");
-            return;
-        }
-        System.out.println("age minimum ");
-        int agemin;
-        try {
-            agemin = sc.nextInt();
-        }catch (Exception e){
-            System.out.println("Age invalide!");
-            return;
-        }
-        System.out.println("date de parution ");
-        System.out.println("date de naissance");
-        LocalDate dp;
-        try {
-            String[] jma = sc.nextLine().split(" ");
-            int j = Integer.parseInt(jma[0]);
-            int m = Integer.parseInt(jma[1]);
-            int a = Integer.parseInt(jma[2]);
-            dp= LocalDate.of(a,m,j);
-        }catch (Exception e){
-            System.out.println("Date invalide!");
-            return;
-        }
-        System.out.println("Type ");
-        String type;
-        try {
-            type = sc.nextLine();
-        }catch (Exception e){
-            System.out.println("type invalide!");
-            return;
-        }
-        System.out.println("Prix location ");
-        double prixLoc;
-        try {
-                prixLoc = sc.nextDouble();
-        }catch (Exception e){
-            System.out.println("prix invalide");
-            return;
-        }
-        System.out.println("Langue ");
-        String langue;
-        try {
-            langue = sc.nextLine();
-        }catch (Exception e){
-            System.out.println("Language invalide");
-            return;
-        }
-        System.out.println("Gentre ");
-        String genre;
-        try{
-            genre = sc.nextLine();
-        }catch (Exception e){
-            System.out.println("Genre invalide");
-            return;
-        }
-        Ouvrage ouvrage = new Ouvrage(titre,agemin,dp,type,prixLoc,langue,genre);
-        presenter.addOuvrages(ouvrage);
-    }
-
-    private void modifier() {
-        //TODO choisir elt et demander les nouvelles valeurs puis appeler méthode maj(lecteur) (à développer) du presenter
     }
 }

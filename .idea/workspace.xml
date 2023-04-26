@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="enonce3 exo 2">
+    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="suite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Auteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/CD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Exemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Exemplaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Lecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Lecteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Livre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Livre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Rayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Rayon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gestion/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gestion/Gestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/GestBiblio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/GestBiblio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/model/AuteursModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/AuteurModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/model/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/model/DAOGenerique.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/model/LecteurModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/LecteurModelV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/model/OuvrageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/OuvrageModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/model/RayonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/RayonModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/model/SpecialAuteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/SpecialAuteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/AuteursPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/AuteurPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/LecteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/LecteurPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/OuvragePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/OuvragePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/RayonPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/RayonPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mvp/view/AuteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/AuteurViewConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/view/AuteurViewInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/AuteurViewInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/view/ExemplaireViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/ExemplaireViewConsole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mvp/view/LecteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/LecteurViewConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/view/LocationViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/LocationViewConsole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mvp/view/OuvrageViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/OuvrageViewConsole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mvp/view/RayonViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/RayonViewConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/view/ViewInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/ViewInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/CDFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/CDFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/CDFactoryBeta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/DVDFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/DVDFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/LivreFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/LivreFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/LivreFactoryBeta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/OuvrageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/OuvrageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +53,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,6 +118,7 @@
       <workItem from="1679916320469" duration="114000" />
       <workItem from="1682495700398" duration="22000" />
       <workItem from="1682525882036" duration="2786000" />
+      <workItem from="1682586476567" duration="3983000" />
     </task>
     <task id="LOCAL-00001" summary="correction">
       <created>1676209521457</created>
@@ -198,7 +232,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681986544566</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="suite">
+      <created>1682533058809</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1682533058809</updated>
+    </task>
+    <task id="LOCAL-00018" summary="suite">
+      <created>1682533070852</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1682533070852</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +274,7 @@
     <MESSAGE value="MVP des classes Auteurs,Rayon" />
     <MESSAGE value="MVP de la classe Ouvrage et modificationde la classe Auteurs" />
     <MESSAGE value="enonce3 exo 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="enonce3 exo 2" />
+    <MESSAGE value="suite" />
+    <option name="LAST_COMMIT_MESSAGE" value="suite" />
   </component>
 </project>

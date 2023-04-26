@@ -11,11 +11,14 @@ public class Rayon {
     private String genre;
     private List<Exemplaire> lex = new ArrayList<>();
 
+    public Rayon(String codeRayon) {
+        this.codeRayon = codeRayon;
+    }
+
+
     public Rayon(String codeRayon, String genre) throws Exception {
-
-        if(codeRayon.trim().equals("")) throw new Exception("Code Rayon vide");
-        if(genre.trim().equals("")) throw new Exception("genre vide");
-
+        if(codeRayon==null|| codeRayon.trim().equals("")) throw new Exception("code rayon vide");
+        if(genre==null|| genre.trim().equals("")) throw new Exception("code rayon vide");
         this.codeRayon = codeRayon;
         this.genre = genre;
     }
@@ -76,7 +79,6 @@ public class Rayon {
     public List<Exemplaire>listerExemplaires(){
         return lex;
     }
-
 
 
 

@@ -12,10 +12,6 @@ public class CD extends Ouvrage {
 
     public CD(String titre, int ageMin, LocalDate dateParution, double prixLocation, String langue, String genre, long code, byte nbrePlages, LocalTime dureeTotale) throws Exception{
         super(titre, ageMin, dateParution, TypeOuvrage.CD, prixLocation, langue, genre);
-
-        if(code <=0 ) throw new Exception("code incorrecte (inf 0)");
-        if(nbrePlages <=0) throw new Exception("Nombre de page 0 incorrecte");
-
         this.code=code;
         this.nbrePlages=nbrePlages;
         this.dureeTotale=dureeTotale;
@@ -76,5 +72,6 @@ public class CD extends Ouvrage {
                 ", dureeTotale='" + dureeTotale + '\'' +
                 "} " ;
     }
+
 }
 

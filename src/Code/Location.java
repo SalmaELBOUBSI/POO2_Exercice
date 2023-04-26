@@ -10,7 +10,10 @@ public class Location {
     private Lecteur loueur;
     private Exemplaire exemplaire;
 
-    public Location(LocalDate dateLocation, LocalDate dateRestitution, Lecteur loueur, Exemplaire exemplaire) {
+
+
+    public Location(LocalDate dateLocation, LocalDate dateRestitution, Lecteur loueur, Exemplaire exemplaire) throws Exception {
+        if(loueur==null || exemplaire==null)  throw new Exception("informations invalides");
         this.dateLocation = dateLocation;
         this.dateRestitution = dateRestitution;
         this.loueur = loueur;
@@ -84,7 +87,7 @@ public class Location {
         if(dateRestitution!=null){
             LocalDate dateLim = dateLocation.plusDays(exemplaire.getOuvrage().njlocmax());
             if(dateRestitution.isAfter(dateLim)){
-                int njretard = (int) ChronoUnit.DAYS.between(dateLim, dateRestitution);
+                int njretard = (int)ChronoUnit.DAYS.between(dateLim, dateRestitution);
                 return exemplaire.getOuvrage().amendeRetard(njretard);
             }
         }
@@ -94,4 +97,5 @@ public class Location {
     public void enregistrerRetour(){
         if(dateRestitution==null) dateRestitution=LocalDate.now();//test sur nul pour éviter d'enregistrer retour 2 fois
     }
+
 }

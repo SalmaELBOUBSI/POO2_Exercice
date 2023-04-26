@@ -11,9 +11,8 @@ public class Auteur {
     private String nationalite;
     private List<Ouvrage> louvrage = new ArrayList<>();
 
-    public Auteur(String nom, String prenom, String nationalite) throws Exception{
-        if(nom.trim().equals("") || prenom.trim().equals("") || nationalite.trim().equals(""))
-            throw new Exception("Nom - Prenom ou nationalité invalide");
+    public Auteur(String nom, String prenom, String nationalite) throws Exception {
+        if(nom==null || nom.trim().equals("")) throw new Exception ("nom vide");
         this.nom = nom;
         this.prenom = prenom;
         this.nationalite = nationalite;
@@ -107,10 +106,10 @@ public class Auteur {
         }
         return ll;
     }
-    public List<Ouvrage> listerOuvrages(String genre) {
+    public List<Ouvrage> listerOuvrages(String genre){
         List<Ouvrage> lot = new ArrayList<>();
-        for (Ouvrage o : louvrage) {
-            if (o.getGenre().equals(genre)) lot.add(o);
+        for(Ouvrage o : louvrage){
+            if(o.getGenre().equals(genre)) lot.add(o);
         }
         return lot;
     }

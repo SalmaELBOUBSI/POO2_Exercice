@@ -13,11 +13,6 @@ public class Livre extends Ouvrage {
 
     public Livre(String titre, int ageMin, LocalDate dateParution, double prixLocation, String langue, String genre, String isbn, int nbrePages, TypeLivre tl, String resume) throws Exception{
         super(titre, ageMin, dateParution, TypeOuvrage.LIVRE, prixLocation, langue, genre);
-
-        if(isbn.trim().equals(""))throw new Exception("isbn vide");
-        if(nbrePages<=0) throw new Exception("page incorrecte");
-        if(resume.trim().equals("")) throw new Exception("resume vide");
-
         this.isbn=isbn;
         this.nbrePages=nbrePages;
         this.tl=tl;

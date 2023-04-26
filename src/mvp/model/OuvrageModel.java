@@ -1,34 +1,26 @@
 package mvp.model;
 
 import Code.Auteur;
+import Code.Exemplaire;
 import Code.Ouvrage;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OuvrageModel implements DAOOuvrage{
-    private int numouv =0;
-    private List<Ouvrage> ouvrages = new ArrayList<>();
-
+public class OuvrageModel extends AbstractModel<Ouvrage> implements SpecialOuvrage{
     @Override
-    public Ouvrage addOuvrages(Ouvrage ouvrage) {
-        boolean present= ouvrages.contains(ouvrage);
-        if(!present){
-            numouv++;
-            //ouvrages.set(numouv);
-            ouvrages.add(ouvrage);
-            return ouvrage;
-        }
-        else return null;
+    public List<Exemplaire> listerExemplaire(Ouvrage o) {
+        return o.listerExemplaires();
     }
 
     @Override
-    public boolean removeOuvrages(Ouvrage ouvrage) {
-        return ouvrages.remove(ouvrages);
+    public List<Exemplaire> listerExemplaire(Ouvrage o, boolean enLocation) {
+        return o.listerExemplaires(enLocation);
     }
 
     @Override
-    public List<Ouvrage> getOuvrages() {
-        return ouvrages;
+    public double amendeRetard(Ouvrage o, int nj) {
+        return o.amendeRetard(nj);
     }
+
 }

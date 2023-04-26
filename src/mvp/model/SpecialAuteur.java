@@ -6,11 +6,9 @@ import java.util.List;
 
 public interface SpecialAuteur {
 
-    List<Ouvrage> listeOuvrage(Auteur aut);
+    public List<Ouvrage>  listerOuvrages(Auteur a);
+    public List<Livre> listerLivre(Auteur a,TypeLivre tl);
 
-    List<Ouvrage> TypeOuvrage(Auteur aut, TypeOuvrage to);
+    public List<Ouvrage> listerOuvrages(Auteur a, String genre);
 
-    List<Ouvrage> GenreOuvrage(Auteur aut, String g);
-
-    List<Livre> TypeLivre(Auteur aut, TypeLivre ti);
 }

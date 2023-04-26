@@ -17,13 +17,12 @@ public class Exemplaire {
     private String etat;
 
 
+
     private List<Location> lloc= new ArrayList<>();
 
 
-    public Exemplaire(String matricule, String descriptionEtat,Ouvrage ouvrage) throws Exception{
-       if(matricule.trim().equals("") || descriptionEtat.trim().equals(""))
-           throw new Exception("matricule ou description est vide");
-
+    public Exemplaire(String matricule, String descriptionEtat,Ouvrage ouvrage) throws Exception {
+        if(ouvrage==null) throw new Exception("ouvrage invalide");
         this.matricule = matricule;
         this.descriptionEtat=descriptionEtat;
         this.ouvrage = ouvrage;
@@ -109,7 +108,7 @@ public class Exemplaire {
     public List<Lecteur> lecteurs(){
         List<Lecteur> ll = new ArrayList<>();
         for(Location l : lloc){
-            if(ll.contains(l)) continue; //par la suite utiliser set
+            if(ll.contains(l.getLoueur())) continue; //par la suite utiliser set
             ll.add(l.getLoueur());
         }
         return null;
@@ -142,7 +141,7 @@ public class Exemplaire {
         if(!enRetard()) return 0;
         Location l = lloc.get(lloc.size()-1);//la location en cours est la dernière de la liste
         LocalDate dateLim = l.getDateLocation().plusDays(ouvrage.njlocmax());
-        int njretard = (int) ChronoUnit.DAYS.between(dateLim, LocalDate.now());
+        int njretard = (int)ChronoUnit.DAYS.between(dateLim, LocalDate.now());
         return njretard;
     }
 
