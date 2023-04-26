@@ -94,13 +94,31 @@ public class AuteurViewConsole implements AuteurViewInterface{
     }
 
 
-    private void ajouter() {
+    private void ajouter() throws Exception {
         System.out.println("nom ");
-        String nom = sc.nextLine();
+        String nom;
+        try {
+                 nom = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Nom invalide!");
+            return;
+        }
         System.out.println("prénom ");
-        String prenom = sc.nextLine();
+        String prenom;
+        try {
+            prenom = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Prenom invalide!");
+            return;
+        }
         System.out.println("nationalite ");
-        String nationalite = sc.nextLine();
+        String nationalite;
+        try {
+            nationalite = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Nationalite invalide");
+            return;
+        }
         Auteur auteur = new Auteur( nom, prenom,nationalite);
         presenter.addAuteurs(auteur);
     }

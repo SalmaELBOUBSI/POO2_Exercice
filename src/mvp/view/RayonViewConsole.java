@@ -68,11 +68,23 @@ public class RayonViewConsole implements RayonViewInterface {
     }
 
 
-    private void ajouter() {
+    private void ajouter() throws Exception {
         System.out.println("Code rayon ");
-        String cr = sc.nextLine();
+        String cr;
+        try {
+            cr = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Code du rayon invalide!");
+            return;
+        }
         System.out.println("Genre  ");
-        String genre = sc.nextLine();
+        String genre;
+        try {
+            genre = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Genre invalide!");
+            return;
+        }
         Rayon ray = new Rayon(cr,genre);
         presenter.addRayon(ray);
     }

@@ -65,26 +65,68 @@ public class OuvrageViewConsole implements OuvrageViewInterface{
         presenter.removeOuvrages(ouvrage);
     }
 
-    private void ajouter() {
+    private void ajouter() throws Exception {
         System.out.println("Titre ");
-        String titre = sc.nextLine();
+        String titre;
+        try {
+            titre = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Titre invalide !");
+            return;
+        }
         System.out.println("age minimum ");
-        int agemin = sc.nextInt();
+        int agemin;
+        try {
+            agemin = sc.nextInt();
+        }catch (Exception e){
+            System.out.println("Age invalide!");
+            return;
+        }
         System.out.println("date de parution ");
         System.out.println("date de naissance");
-        String[] jma = sc.nextLine().split(" ");
-        int j = Integer.parseInt(jma[0]);
-        int m = Integer.parseInt(jma[1]);
-        int a = Integer.parseInt(jma[2]);
-        LocalDate dp= LocalDate.of(a,m,j);
+        LocalDate dp;
+        try {
+            String[] jma = sc.nextLine().split(" ");
+            int j = Integer.parseInt(jma[0]);
+            int m = Integer.parseInt(jma[1]);
+            int a = Integer.parseInt(jma[2]);
+            dp= LocalDate.of(a,m,j);
+        }catch (Exception e){
+            System.out.println("Date invalide!");
+            return;
+        }
         System.out.println("Type ");
-        String type = sc.nextLine();
+        String type;
+        try {
+            type = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("type invalide!");
+            return;
+        }
         System.out.println("Prix location ");
-        double prixLoc = sc.nextDouble();
+        double prixLoc;
+        try {
+                prixLoc = sc.nextDouble();
+        }catch (Exception e){
+            System.out.println("prix invalide");
+            return;
+        }
         System.out.println("Langue ");
-        String langue = sc.nextLine();
+        String langue;
+        try {
+            langue = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Language invalide");
+            return;
+        }
         System.out.println("Gentre ");
-        String genre = sc.nextLine();
+        String genre;
+        try{
+            genre = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Genre invalide");
+            return;
+        }
         Ouvrage ouvrage = new Ouvrage(titre,agemin,dp,type,prixLoc,langue,genre);
         presenter.addOuvrages(ouvrage);
     }

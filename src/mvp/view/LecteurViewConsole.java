@@ -106,23 +106,60 @@ public class LecteurViewConsole implements LecteurViewInterface{
     }
 
 
-    private void ajouter() {
+    private void ajouter() throws Exception {
         System.out.println("nom ");
-        String nom = sc.nextLine();
+        String nom;
+        try {
+                nom = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Entrée invalide pour le nom. Veuillez entrer une chaîne de caractères.");
+            return;
+        }
         System.out.println("prénom ");
-        String prenom = sc.nextLine();
+        String prenom;
+        try {
+               prenom = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Entrée invalide pour le prénom. Veuillez entrer une chaîne de caractères.");
+            return;
+        }
         System.out.println("date de naissance");
+        try {
+
+        }catch (Exception e){
+            System.out.println("Entrée invalide pour la date de naissance. Veuillez entrer une date au format jj mm aaaa.");
+            return;
+        }
         String[] jma = sc.nextLine().split(" ");
         int j = Integer.parseInt(jma[0]);
         int m = Integer.parseInt(jma[1]);
         int a = Integer.parseInt(jma[2]);
         LocalDate dn = LocalDate.of(a, m, j);
+
         System.out.println("adresse");
-        String adr = sc.nextLine();
+        String adr;
+        try {
+             adr = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Entrée invalide pour l'adresse. Veuillez entrer une chaîne de caractères.");
+            return;
+        }
         System.out.println("mail");
-        String mail = sc.nextLine();
+        String mail;
+        try {
+             mail = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Entrée invalide pour le mail. Veuillez entrer une chaîne de caractères.");
+            return;
+        }
         System.out.println("tel ");
-        String tel = sc.nextLine();
+        String tel;
+        try {
+            tel = sc.nextLine();
+        }catch (Exception e){
+            System.out.println("Entrée invalide pour le numéro de téléphone. Veuillez entrer une chaîne de caractères.");
+            return;
+        }
         Lecteur lec = new Lecteur(0, nom, prenom, dn, adr, mail, tel);
         presenter.addLecteur(lec);
         llec=presenter.getAll();//rafraichissement
