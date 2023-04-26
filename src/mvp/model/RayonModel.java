@@ -6,7 +6,7 @@ import Code.Rayon;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RayonModel implements DAORayon{
+public class RayonModel implements DAO<Rayon>{
     private int numcli =0;
     private List<Rayon> rayons = new ArrayList<>();
 
@@ -32,4 +32,28 @@ public class RayonModel implements DAORayon{
         return rayons;
     }
 
+    @Override
+    public Rayon add(Rayon element) {
+        return null;
+    }
+
+    @Override
+    public boolean remove(Rayon element) {
+        return false;
+    }
+
+    @Override
+    public Rayon update(Rayon element) {
+        return null;
+    }
+
+    @Override
+    public Rayon read(Rayon element) {
+        return null;
+    }
+
+    @Override
+    public List<Rayon> getAll() {
+        return null;
+    }
 }

@@ -1,6 +1,7 @@
 package mvp.presenter;
 
 import Code.Rayon;
+import mvp.model.DAO;
 import mvp.model.DAORayon;
 import mvp.view.RayonViewInterface;
 
@@ -10,7 +11,7 @@ public class RayonPresenter {
     private DAORayon model;
     private RayonViewInterface view;
 
-    public RayonPresenter(DAORayon model, RayonViewInterface view) {
+    public RayonPresenter(DAO<Rayon> model, RayonViewInterface view) {
         this.model = model;
         this.view = view;
         this.view.setPresenter(this);
