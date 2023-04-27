@@ -4,14 +4,10 @@ import mvp.presenter.Presenter;
 
 import java.util.List;
 
-public interface ViewInterface<T> {
-    public void setPresenter(Presenter<T> presenter);
+public interface ViewInterface<L> {
+    <T> void setPresenter(Presenter<T> tPresenter);
 
-    public void setListDatas(List<T> datas);
+    <T> void setListDatas(List<T> all);
 
-    public void affMsg(String msg);
-
-    public void affList(List l);
-
-    public T selectionner(List<T> l);
+    void affMsg(String s);
 }

@@ -3,13 +3,13 @@ package mvp.model;
 import java.util.List;
 
 public interface DAO<T> {
+    T add(T element);
 
-    T add(T t);
+    boolean remove(T element);
 
-    boolean remove(T t);
-    T update(T t);
+    T update(T element);
 
-    T read(T rech);
+    T read(T element);
 
-    List<T> getAll();;
+    List<T> getAll();
 }

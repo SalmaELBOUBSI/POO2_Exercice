@@ -5,9 +5,9 @@ import mvp.view.ViewInterface;
 
 import java.util.List;
 
-public abstract class Presenter <T>{
+public class Presenter <T>{
     protected  DAO<T> model;
-    protected  ViewInterface<T> view;
+    protected ViewInterface<T> view;
 
     public Presenter(DAO<T> model, ViewInterface<T> view) {
         this.model = model;
@@ -18,7 +18,7 @@ public abstract class Presenter <T>{
     public void start() {
         view.setListDatas(getAll());
     }
-
+    //
     public List<T> getAll(){
         return model.getAll();
     }
@@ -48,10 +48,6 @@ public abstract class Presenter <T>{
         T elt= model.read(rech);
         if(elt==null) view.affMsg("recherche infructueuse");
         else view.affMsg(elt.toString());
-    }
-
-    public T selection(){
-        return  view.selectionner(model.getAll());
     }
 
 }
