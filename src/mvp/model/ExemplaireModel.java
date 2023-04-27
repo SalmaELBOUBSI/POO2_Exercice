@@ -8,11 +8,11 @@ import java.util.List;
 public class ExemplaireModel extends AbstractModel<Exemplaire> implements SpecialExemplaire  {
     @Override
     public void modifierEtat(Exemplaire ex, String etat) {
-
+        ex.setDescriptionEtat(etat);
     }
 
     @Override
-    public Lecteur LecteurActuel(Exemplaire ex) {
+    public Lecteur lecteurActuel(Exemplaire ex) {
         return ex.lecteurActuel();
     }
 
@@ -45,6 +45,5 @@ public class ExemplaireModel extends AbstractModel<Exemplaire> implements Specia
     public boolean enLocation(Exemplaire ex) {
         return ex.enLocation();
     }
-
 
 }

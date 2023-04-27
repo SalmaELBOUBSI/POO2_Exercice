@@ -152,5 +152,6 @@ public class Exemplaire {
         if(l.getDateRestitution()==null) return true;
         return false;
     }
+
 }
 

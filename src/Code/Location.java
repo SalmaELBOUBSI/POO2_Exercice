@@ -26,6 +26,8 @@ public class Location {
         this.loueur = loueur;
         this.exemplaire = exemplaire;
         this.dateLocation=LocalDate.now();
+        this.loueur.getLloc().add(this);
+        this.exemplaire.getLloc().add(this);
     }
 
     public LocalDate getDateLocation() {
@@ -97,5 +99,6 @@ public class Location {
     public void enregistrerRetour(){
         if(dateRestitution==null) dateRestitution=LocalDate.now();//test sur nul pour éviter d'enregistrer retour 2 fois
     }
+
 
 }

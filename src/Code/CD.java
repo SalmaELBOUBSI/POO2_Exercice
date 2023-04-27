@@ -72,6 +72,5 @@ public class CD extends Ouvrage {
                 ", dureeTotale='" + dureeTotale + '\'' +
                 "} " ;
     }
-
 }
 

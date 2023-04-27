@@ -7,11 +7,7 @@ public class Mail {
     private String message;
     private String dateEnvoi;
 
-    public Mail(String objet, String message, String dateEnvoi) throws Exception {
-       if(objet.trim().equals("")) throw new Exception("objet vide");
-        if(message.trim().equals("")) throw new Exception("message vide");
-
-
+    public Mail(String objet, String message, String dateEnvoi) {
         this.objet = objet;
         this.message = message;
         this.dateEnvoi = dateEnvoi;

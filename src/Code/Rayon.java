@@ -44,7 +44,6 @@ public class Rayon {
                 '}';
     }
     public void addExemplaire(Exemplaire e){
-        lex.add(e);
         e.setRayon(this);
     }
 
@@ -79,8 +78,5 @@ public class Rayon {
     public List<Exemplaire>listerExemplaires(){
         return lex;
     }
-
-
-
 
 }

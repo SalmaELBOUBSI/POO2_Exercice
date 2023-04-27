@@ -3,17 +3,32 @@ package mvp.presenter;
 import Code.Auteur;
 import Code.Ouvrage;
 import mvp.model.DAO;
-import mvp.model.DAOAuteurs;
-import mvp.model.DAOOuvrage;
-import mvp.view.AuteurViewInterface;
-import mvp.view.OuvrageViewInterface;
+import mvp.model.SpecialOuvrage;
 import mvp.view.ViewInterface;
 
-import java.util.List;
+public class OuvragePresenter extends Presenter<Ouvrage> implements SpecialOuvragePresenter{
 
-public class OuvragePresenter extends Presenter<Ouvrage> {
+    private Presenter<Auteur> auteurPresenter;
+    @Override
+    public void setAuteurPresenter(Presenter<Auteur> auteurPresenter) {
+        this.auteurPresenter = auteurPresenter;
+    }
+
+    @Override
+    public Auteur choixAuteur(){
+        return  auteurPresenter.selection();
+    }
+
     public OuvragePresenter(DAO<Ouvrage> model, ViewInterface<Ouvrage> view) {
         super(model,view);
     }
 
+    @Override
+    public void  listerExemplaire(Ouvrage o){
+        view.affList(((SpecialOuvrage)model).listerExemplaire(o));
+    }
+    @Override
+    public void listerExemplaire(Ouvrage o, boolean enLocation){
+        view.affList(((SpecialOuvrage)model).listerExemplaire(o,enLocation));
+    }
 }

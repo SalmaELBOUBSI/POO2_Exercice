@@ -9,10 +9,10 @@ import java.util.Scanner;
 
 import static utilitaires.Utilitaire.*;
 
-public abstract class AbstractViewConsole<T> implements ViewInterface<T>  {
+public abstract class AbstractViewConsole<T> implements ViewInterface<T> {
     protected Presenter<T> presenter;
     protected List<T> ldatas;
-    protected Scanner sc = new Scanner(System.in);
+    protected  Scanner sc = new Scanner(System.in);
 
     @Override
     public void setPresenter(Presenter<T> presenter) {
@@ -55,6 +55,7 @@ public abstract class AbstractViewConsole<T> implements ViewInterface<T>  {
                     modifier();
                     break;
                 case 5:
+                    affListe(ldatas);
                     special();
                     break;
                 case 6:
@@ -82,4 +83,5 @@ public abstract class AbstractViewConsole<T> implements ViewInterface<T>  {
     protected abstract  void ajouter();
     protected abstract void special();
 }
+
 

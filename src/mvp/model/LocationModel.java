@@ -13,5 +13,4 @@ public class LocationModel extends AbstractModel<Location> implements Specialloc
         l.enregistrerRetour();
     }
 
-
 }
