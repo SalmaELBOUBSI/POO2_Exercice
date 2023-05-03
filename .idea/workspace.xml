@@ -1,54 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="correction">
+    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;src/mvp/model/LecteurModelV1.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Exemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Exemplaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Lecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Lecteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Mail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Ouvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Ouvrage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Code/Rayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Rayon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/GestBiblio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/GestBiblio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/DAORayon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/DAORayon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/ExemplaireModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/ExemplaireModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/LecteurModelV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/LecteurModelV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/LocationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/LocationModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/RayonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/RayonModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/RayonModelV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/RayonModelV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/SpecialExemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/SpecialExemplaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/AuteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/AuteurPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/ExemplairePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/ExemplairePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/LecteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/LecteurPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/LocationPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/LocationPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/OuvragePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/OuvragePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/RayonPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/RayonPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/SpecialAuteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/SpecialAuteurPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/SpecialLecteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/SpecialLecteurPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/AbstractViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/AbstractViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/AuteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/AuteurViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/AuteurViewInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/ExemplaireViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/ExemplaireViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/LecteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/LecteurViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/LecteurViewInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/LecteurViewInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/LocationViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/LocationViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/OuvrageViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/OuvrageViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/OuvrageViewInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/RayonViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/RayonViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/RayonViewInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/SpecialLocationViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/SpecialLocationViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/SpecialRayonViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/SpecialRayonViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/ViewInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/ViewInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/CDFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/CDFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/DVDFactoryBeta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/Identifiable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/LivreFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/LivreFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/OuvrageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/OuvrageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/comparators/ExemplaireComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/comparators/ExemplaireComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/comparators/LecteurComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/comparators/LecteurComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/comparators/LocationComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/comparators/LocationComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilitaires/comparators/OuvrageComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilitaires/comparators/OuvrageComparator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -146,7 +104,8 @@
       <workItem from="1679916320469" duration="114000" />
       <workItem from="1682495700398" duration="22000" />
       <workItem from="1682525882036" duration="2786000" />
-      <workItem from="1682586476567" duration="7445000" />
+      <workItem from="1682586476567" duration="8016000" />
+      <workItem from="1683144199918" duration="847000" />
     </task>
     <task id="LOCAL-00001" summary="correction">
       <created>1676209521457</created>
@@ -288,7 +247,28 @@
       <option name="project" value="LOCAL" />
       <updated>1682590570083</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="correction V2">
+      <created>1682677013161</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1682677013161</updated>
+    </task>
+    <task id="LOCAL-00022" summary="correction_V2">
+      <created>1682677105953</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1682677105953</updated>
+    </task>
+    <task id="LOCAL-00023" summary="correction_V2">
+      <created>1682677124825</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1682677124825</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +297,8 @@
     <MESSAGE value="enonce3 exo 2" />
     <MESSAGE value="suite" />
     <MESSAGE value="correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction" />
+    <MESSAGE value="correction V2" />
+    <MESSAGE value="correction_V2" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction_V2" />
   </component>
 </project>
