@@ -53,4 +53,8 @@ public class LecteurModelV2 implements DAO<Lecteur>,SpecialLecteur{
         return new ArrayList<>(l.listerExemplairesLoues());
     }
 
+    @Override
+    public Lecteur lecParMail(String mail) {
+        return null;
+    }
 }

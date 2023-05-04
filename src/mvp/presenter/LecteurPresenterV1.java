@@ -9,8 +9,8 @@ import mvp.view.LecteurViewInterface;
 import java.util.List;
 
 public class LecteurPresenterV1 {
-    protected DAO<Lecteur> model;
-    protected LecteurViewInterface view;
+    protected  DAO<Lecteur> model;
+    protected  LecteurViewInterface view;
 
     public LecteurPresenterV1(DAO<Lecteur> model, LecteurViewInterface view) {
         this.model = model;

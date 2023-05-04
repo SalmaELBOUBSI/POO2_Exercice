@@ -6,14 +6,30 @@ import mvp.presenter.AuteurPresenter;
 import mvp.presenter.SpecialAuteurPresenter;
 import utilitaires.Utilitaire;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import static utilitaires.Utilitaire.*;
 
 public class AuteurViewConsole extends AbstractViewConsole<Auteur> implements SpecialAuteurViewConsole {
+
+    @Override
+    public void setListDatas(List<Auteur> ldatas){
+        //Comparator<Auteur> cmp = new AuteurComparator();
+
+        //  ldatas.sort(cmp);
+
+        ldatas.sort(new Comparator<Auteur>() {
+            @Override
+            public int compare(Auteur o1, Auteur o2) {
+                if(o1.getNom().compareTo(o2.getNom())!=0) return (o1.getNom().compareTo(o2.getNom()));
+                return o1.getPrenom().compareTo(o2.getPrenom())  ;
+            }
+        });
+        super.setListDatas(ldatas);
+    }
+
+
+
     @Override
     protected void rechercher() {
         try {
@@ -118,6 +134,5 @@ public class AuteurViewConsole extends AbstractViewConsole<Auteur> implements Sp
         TypeLivre tl = tlv[ch2-1];
         ((SpecialAuteurPresenter)presenter).listerLivre(a,tl);
     }
-
 
 }
