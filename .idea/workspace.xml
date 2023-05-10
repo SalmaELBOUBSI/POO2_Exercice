@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="correction">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27-04-23_12_15_[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="listData">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/AuteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/AuteurViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/ExemplaireViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/ExemplaireViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/LecteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/LecteurViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/OuvrageViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/OuvrageViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/RayonViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/RayonViewConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Code/Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Code/Mail.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +105,7 @@
       <workItem from="1683144199918" duration="1480000" />
       <workItem from="1683192921688" duration="2400000" />
       <workItem from="1683378485497" duration="28000" />
+      <workItem from="1683735523589" duration="2194000" />
     </task>
     <task id="LOCAL-00001" summary="correction">
       <created>1676209521457</created>
@@ -286,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683193819331</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="listData">
+      <created>1683735594309</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1683735594309</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +321,7 @@
     <MESSAGE value="correction_V2" />
     <MESSAGE value="comparator" />
     <MESSAGE value="correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction" />
+    <MESSAGE value="listData" />
+    <option name="LAST_COMMIT_MESSAGE" value="listData" />
   </component>
 </project>
