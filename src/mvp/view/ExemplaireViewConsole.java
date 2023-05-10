@@ -11,6 +11,15 @@ import java.util.List;
 import static utilitaires.Utilitaire.*;
 
 public class ExemplaireViewConsole extends AbstractViewConsole<Exemplaire> implements SpecialExemplaireViewConsole {
+
+    @Override
+    public void setListDatas(List<Exemplaire> ldatas){
+        ldatas.sort((o1, o2) -> {
+            if(o1.getMatricule().compareTo(o2.getMatricule())!=0) return (o1.getMatricule().compareTo(o2.getMatricule()));
+            return o1.getMatricule().compareTo(o2.getMatricule())  ;
+        });
+        super.setListDatas(ldatas);
+    }
     @Override
     protected void rechercher() {
         try{

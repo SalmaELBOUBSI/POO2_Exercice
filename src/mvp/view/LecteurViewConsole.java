@@ -1,5 +1,6 @@
 package mvp.view;
 
+import Code.Auteur;
 import Code.Exemplaire;
 import Code.Lecteur;
 import mvp.presenter.LecteurPresenter;
@@ -17,6 +18,15 @@ import static utilitaires.Utilitaire.*;
 public class LecteurViewConsole extends AbstractViewConsole<Lecteur> implements SpecialLecteurViewConsole {
 
 
+    @Override
+    public void setListDatas(List<Lecteur> ldatas){
+
+        ldatas.sort((o1, o2) -> {
+            if(o1.getNom().compareTo(o2.getNom())!=0) return (o1.getNom().compareTo(o2.getNom()));
+            return o1.getPrenom().compareTo(o2.getPrenom())  ;
+        });
+        super.setListDatas(ldatas);
+    }
 
     protected  void rechercher() {
         try{

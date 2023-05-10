@@ -1,5 +1,6 @@
 package mvp.view;
 
+import Code.Auteur;
 import Code.Rayon;
 import mvp.presenter.RayonPresenter;
 import mvp.presenter.SpecialRayonPresenter;
@@ -14,6 +15,15 @@ import java.util.Scanner;
 import static utilitaires.Utilitaire.*;
 
 public class RayonViewConsole extends AbstractViewConsole<Rayon> implements SpecialRayonViewConsole {
+    @Override
+    public void setListDatas(List<Rayon> ldatas){
+
+        ldatas.sort((o1, o2) -> {
+            if(o1.getCodeRayon().compareTo(o2.getCodeRayon())!=0) return (o1.getCodeRayon().compareTo(o2.getCodeRayon()));
+            return o1.getCodeRayon().compareTo(o2.getCodeRayon())  ;
+        });
+        super.setListDatas(ldatas);
+    }
     @Override
     protected void rechercher() {
         System.out.println("code du rayon : ");

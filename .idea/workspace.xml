@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="comparator">
+    <list default="true" id="a42521df-4800-4526-9354-3756f30ab125" name="Changes" comment="correction">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27-04-23_12_15_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/LecteurModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/LecteurModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/LecteurModelV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/LecteurModelV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/LecteurModelV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/LecteurModelV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/model/SpecialLecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/SpecialLecteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/LecteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/LecteurPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/LecteurPresenterV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/LecteurPresenterV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/SpecialLecteurPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/SpecialLecteurPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mvp/view/AuteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/AuteurViewConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/view/ExemplaireViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/ExemplaireViewConsole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mvp/view/LecteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/LecteurViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/LecteurViewConsoleV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/LecteurViewConsoleV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mvp/view/SpecialLecteurViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/SpecialLecteurViewConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/comparators/ExemplaireComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/comparators/LecteurComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/comparators/LocationComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilitaires/comparators/OuvrageComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/view/OuvrageViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/OuvrageViewConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/view/RayonViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/RayonViewConsole.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +108,8 @@
       <workItem from="1682525882036" duration="2786000" />
       <workItem from="1682586476567" duration="8016000" />
       <workItem from="1683144199918" duration="1480000" />
-      <workItem from="1683192921688" duration="741000" />
+      <workItem from="1683192921688" duration="2400000" />
+      <workItem from="1683378485497" duration="28000" />
     </task>
     <task id="LOCAL-00001" summary="correction">
       <created>1676209521457</created>
@@ -287,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683145093824</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="correction">
+      <created>1683193819331</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1683193819331</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,10 +314,10 @@
     <MESSAGE value="MVP de la classe Ouvrage et modificationde la classe Auteurs" />
     <MESSAGE value="enonce3 exo 2" />
     <MESSAGE value="suite" />
-    <MESSAGE value="correction" />
     <MESSAGE value="correction V2" />
     <MESSAGE value="correction_V2" />
     <MESSAGE value="comparator" />
-    <option name="LAST_COMMIT_MESSAGE" value="comparator" />
+    <MESSAGE value="correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction" />
   </component>
 </project>

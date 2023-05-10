@@ -17,6 +17,15 @@ import static utilitaires.Utilitaire.*;
 
 public class OuvrageViewConsole extends AbstractViewConsole<Ouvrage> implements SpecialOuvrageViewConsole {
     @Override
+    public void setListDatas(List<Ouvrage> ldatas){
+
+        ldatas.sort((o1, o2) -> {
+            if(o1.getTitre().compareTo(o2.getTitre())!=0) return (o1.getTitre().compareTo(o2.getTitre()));
+            return o1.getTitre().compareTo(o2.getTitre())  ;
+        });
+        super.setListDatas(ldatas);
+    }
+    @Override
     protected void rechercher() {
         //TODO rechercher ouvrage
     }
